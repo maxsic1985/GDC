@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5260e9b2a364e5b8a15e1cbaa052bcb, type: 3}
+  m_Name: EnemyData
+  m_EditorClassIdentifier: 
+  EnemyPrefab:
+    m_AssetGUID: aee82e1da214342339ade8e72da88333
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  CountForInstantiate: 3
+  Lives: 3
+  StartPositions:
+  - {x: 1, y: 0, z: 0}
+  - {x: 3, y: 3, z: 0}
+  - {x: 4, y: 4, z: 0}
+  - {x: 5, y: -0.5, z: 0}
+  - {x: 2, y: 2, z: 0}
+  StartRotation:
+  - {x: 0, y: 180, z: 0}
+  - {x: 0, y: 180, z: 0}
+  - {x: 0, y: 180, z: 0}
+  - {x: 0, y: 180, z: 0}
+  - {x: 0, y: 180, z: 0}
+  EndReachedDistance: 0.5
+  DropPrefabs:
+  - m_AssetGUID: 6c729b07d27f1412091aab02518c6124
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 3f39a11e3ccc94cbb9fc375c01a72f07
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0

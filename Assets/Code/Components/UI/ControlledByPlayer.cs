@@ -1,0 +1,3 @@
+namespace MSuhininTestovoe {
+    struct ControlledByPlayer { }
+}
