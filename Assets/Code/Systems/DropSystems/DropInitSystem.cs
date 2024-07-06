@@ -9,12 +9,13 @@ namespace MSuhininTestovoe.B2B
     public class DropInitSystem : IEcsInitSystem, IEcsRunSystem
     {
         private EcsFilter _filter;
+        private EcsFilter _playerFilter;
         private EcsWorld _world;
         private EcsPool<PrefabComponent> _loadPrefabPool;
         private EcsPool<DropAssetComponent> _dropPool;
         private EcsPool<IsDropInstantiateFlag> _isDropInstantiateFlag;
         private EcsPool<DropComponent> _isDropPool;
-
+        
 
         public void Init(IEcsSystems systems)
         {
@@ -24,15 +25,24 @@ namespace MSuhininTestovoe.B2B
                 .Filter<DropAssetComponent>()
                 .Inc<IsDropInstantiateFlag>()
               .End();
+            
+           _playerFilter = _world.Filter<IsPlayerComponent>()
+               .Inc<TransformComponent>()
+               .End();
+            
             _dropPool = _world.GetPool<DropAssetComponent>();
             _isDropInstantiateFlag = _world.GetPool<IsDropInstantiateFlag>();
             _isDropPool = _world.GetPool<DropComponent>();
             _loadPrefabPool = _world.GetPool<PrefabComponent>();
+            
+          
         }
         
 
         public void Run(IEcsSystems systems)
         {
+            
+            
             foreach (int entity in _filter)
             {
                 ref DropAssetComponent dropAsset = ref _dropPool.Get(entity);
@@ -40,15 +50,16 @@ namespace MSuhininTestovoe.B2B
                     loadPrefabFromPool.Value = dropAsset.Drop;
                     
                     var newEntity = _world.NewEntity();
-                    GameObject gameObject = Object.Instantiate(loadPrefabFromPool.Value);
+                    GameObject dropObject = Object.Instantiate(loadPrefabFromPool.Value);
                     
-                    
-                    gameObject.GetComponent<DropActor>().AddEntity(newEntity);
+                    dropObject.GetComponent<DropActor>().AddEntity(newEntity);
                     ref DropComponent drop = ref _isDropPool.Add(newEntity);
 
-                    drop.DropType = gameObject.GetComponent<DropActor>().DropType;
-                    drop.Sprite = gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite;
+                    drop.DropType = dropObject.GetComponent<DropActor>().DropType;
+                    drop.Sprite = dropObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite;
                     
+                    var playerEntity = _playerFilter.GetRawEntities()[0];
+                    dropObject.transform.position = _world.GetPool<TransformComponent>().Get(playerEntity).Value.position+GameConstants.DROP_OFFSET;
                     
                     _loadPrefabPool.Del(entity);
                     _isDropInstantiateFlag.Del(entity);
