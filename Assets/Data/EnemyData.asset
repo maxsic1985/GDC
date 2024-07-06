@@ -33,11 +33,5 @@ MonoBehaviour:
   - {x: 0, y: 180, z: 0}
   EndReachedDistance: 0.5
   DropPrefabs:
-  - m_AssetGUID: 6c729b07d27f1412091aab02518c6124
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: 3f39a11e3ccc94cbb9fc375c01a72f07
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
+  - {fileID: 5087527289324509467, guid: 6c729b07d27f1412091aab02518c6124, type: 3}
+  - {fileID: 5087527289324509467, guid: 3f39a11e3ccc94cbb9fc375c01a72f07, type: 3}

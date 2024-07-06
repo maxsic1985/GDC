@@ -37,7 +37,7 @@ namespace MSuhininTestovoe.B2B
             {
                 ref DropAssetComponent dropAsset = ref _dropPool.Get(entity);
                     ref PrefabComponent loadPrefabFromPool = ref _loadPrefabPool.Add(entity);
-                    loadPrefabFromPool.Value = dropAsset.Drop.editorAsset;
+                    loadPrefabFromPool.Value = dropAsset.Drop;
                     
                     var newEntity = _world.NewEntity();
                     GameObject gameObject = Object.Instantiate(loadPrefabFromPool.Value);
