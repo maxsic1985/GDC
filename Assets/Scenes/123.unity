@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 648513343681458847, guid: 607ab78d923b249e09c95de216107a51, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1298.94
+      objectReference: {fileID: 0}
     - target: {fileID: 1536552440267140552, guid: 607ab78d923b249e09c95de216107a51, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -177,6 +181,30 @@ PrefabInstance:
     - target: {fileID: 1536552440267140554, guid: 607ab78d923b249e09c95de216107a51, type: 3}
       propertyPath: m_Name
       value: Emmiter
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345964766367732563, guid: 607ab78d923b249e09c95de216107a51, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345964766367732563, guid: 607ab78d923b249e09c95de216107a51, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345964766570933545, guid: 607ab78d923b249e09c95de216107a51, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 96
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345964766570933545, guid: 607ab78d923b249e09c95de216107a51, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 96
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345964766635020072, guid: 607ab78d923b249e09c95de216107a51, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345964766635020072, guid: 607ab78d923b249e09c95de216107a51, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 7791122761371681699, guid: 607ab78d923b249e09c95de216107a51, type: 3}
       propertyPath: _widgetName
