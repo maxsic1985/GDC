@@ -22,7 +22,7 @@ namespace MSuhininTestovoe.B2B
           
             
             new CameraSystems(systems);
-         //   new SoundSystems(systems);
+            new SoundSystems(systems);
         }
     }
 }
