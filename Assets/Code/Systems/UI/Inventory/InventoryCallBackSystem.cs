@@ -63,7 +63,7 @@ namespace MSuhininTestovoe
         [EcsUguiClickEvent(UIConstants.BTN_SELECT_SLOT, WorldsNamesConstants.EVENTS)]
         void OnClickItem(in EcsUguiClickEvent e)
         {
-            _selectedSlot = e.Sender.gameObject.GetComponent<ItemActor>().GetComponent<SlotView>();
+            _selectedSlot = e.Sender.gameObject.GetComponent<SlotView>();
             _selectedEntity = _selectedSlot.Entity;
         }
 
