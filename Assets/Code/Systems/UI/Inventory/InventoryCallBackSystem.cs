@@ -1,7 +1,6 @@
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Unity.Ugui;
 using MSuhininTestovoe.B2B;
-using UnityEngine;
 using UnityEngine.Scripting;
 
 

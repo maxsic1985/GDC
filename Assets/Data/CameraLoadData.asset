@@ -17,6 +17,6 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  StartPosition: {x: -7, y: 1, z: -10}
+  StartPosition: {x: -4, y: 0, z: -10}
   StartRotation: {x: 0, y: 0, z: 0}
   CameraSmoothness: 0.454

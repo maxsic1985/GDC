@@ -20,4 +20,4 @@ MonoBehaviour:
   StartPosition: {x: 0, y: 0, z: 0}
   Tracks:
   - {fileID: 8300000, guid: 9de7af4f00dbea4489aff130cd12101e, type: 3}
-  FirstTrackNumber: 1
+  FirstTrackNumber: 0

@@ -10,7 +10,7 @@ namespace MSuhininTestovoe.B2B
         public  const string BTN_SHOW_INVENTORY="ShowInventotyWidget";
         public  const string BTN_DROP_FROM_INVENTORY="DropFromInventotyWidget";
         public  const string BTN_SELECT_SLOT="SelectSlotWidget";
-        
+        public  const string ENEMY_CNT="EnemyLblWidget";
 
        
     }

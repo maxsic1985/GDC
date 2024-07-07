@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: MusicLoadData
   m_EditorClassIdentifier: 
   Source:
-    m_AssetGUID: 
+    m_AssetGUID: 7e16b503e0adc8940b1db2e4d7efdb13
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   StartPosition: {x: 0, y: 0, z: 0}
-  Tracks: []
+  Tracks:
+  - {fileID: 8300000, guid: 0d1e50e546cb402428c76fd9fa374487, type: 3}
   FirstTrackNumber: 0
