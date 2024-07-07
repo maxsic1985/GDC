@@ -5,7 +5,7 @@ namespace MSuhininTestovoe.B2B
 {
     public struct DropAssetComponent
     {
-        public AssetReferenceGameObject Drop; 
+        public GameObject Drop; 
 
     }
 }

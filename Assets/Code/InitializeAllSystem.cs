@@ -21,8 +21,8 @@ namespace MSuhininTestovoe.B2B
             new DeathSystems(systems);
           
             
-         //   new CameraSystems(systems);
-         //   new SoundSystems(systems);
+            new CameraSystems(systems);
+            new SoundSystems(systems);
         }
     }
 }

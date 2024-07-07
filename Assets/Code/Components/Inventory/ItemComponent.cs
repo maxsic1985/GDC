@@ -11,5 +11,6 @@ namespace MSuhininTestovoe.B2B
         public Image Sprite;
         public int Count;
         public TMP_Text CountText;
+        public GameObject Prefab;
     }
 }

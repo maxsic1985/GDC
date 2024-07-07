@@ -16,7 +16,23 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: d18cb71a5c2c941239f2a39a899f9808
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 1a4578f090e48e44194f07c8a66359b9
+    m_Address: SoundEffectsLoadData
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a48f45b4927e5814a87442747cc9c4ba
+    m_Address: Sound
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7e16b503e0adc8940b1db2e4d7efdb13
+    m_Address: Music
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6735de4307720084999b8a0f4bd30a68
+    m_Address: MusicLoadData
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 4e685cad4f2584fc5ba897fddc3c7841, type: 2}
   m_SchemaSet:

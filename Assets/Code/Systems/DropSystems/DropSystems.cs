@@ -9,7 +9,7 @@ namespace MSuhininTestovoe.B2B
         public DropSystems(EcsSystems systems)
         {
             systems
-                .Add(new DropInitSystem());
+                .Add(new DropCreateSystem());
             
         }
     }

@@ -14,7 +14,7 @@ namespace MSuhininTestovoe.B2B
         private EcsPool<BoxColliderComponent> _playerBoxColliderComponentPool;
         private EcsPool<PlayerRigidBodyComponent> _playerRigidBodyComponentPool;
         private EcsPool<HealthViewComponent> _playerHealthViewComponentPool;
-
+        private PlayerSharedData _sharedData;
 
         public void Init(IEcsSystems systems)
         {
@@ -26,6 +26,8 @@ namespace MSuhininTestovoe.B2B
             _playerBoxColliderComponentPool = world.GetPool<BoxColliderComponent>();
             _playerRigidBodyComponentPool = world.GetPool<PlayerRigidBodyComponent>();
             _playerHealthViewComponentPool = world.GetPool<HealthViewComponent>();
+            _sharedData = systems.GetShared<SharedData>().GetPlayerSharedData;
+
         }
 
         

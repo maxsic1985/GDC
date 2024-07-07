@@ -70,6 +70,7 @@ namespace MSuhininTestovoe.B2B
                     itemComponent.CountText = gameObject.GetComponent<SlotView>().CountText;
                     itemComponent.Count = gameObject.GetComponent<SlotView>().Count;
                     gameObject.transform.localPosition = Vector3.zero;
+                    gameObject.GetComponent<SlotView>().Entity =  newEntity ;
                 }
 
                 _isItemPool.Del(entity);

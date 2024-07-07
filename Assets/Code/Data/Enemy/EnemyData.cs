@@ -23,7 +23,7 @@ namespace MSuhininTestovoe.B2B
         public float EndReachedDistance;
         
         [Header("Drop:")]
-        public List<AssetReferenceGameObject> DropPrefabs;
+        public List<GameObject> DropPrefabs;
         
     }
 }
