@@ -12,6 +12,7 @@ namespace MSuhininTestovoe.B2B
         private EcsPool<EnemyHealthComponent> _enemyHealthComponentPool;
         private EcsPool<TransformComponent> _transformComponentPool;
         private EcsPool<IsDropInstantiateFlag> _isDropComponentPool;
+        private EcsPool<DropAssetComponent> _dropAssetComponentPool;
         private IPoolService _poolService;
 
 
@@ -22,12 +23,14 @@ namespace MSuhininTestovoe.B2B
             _enemyFilter = _world
                 .Filter<EnemyHealthComponent>()
                 .Inc<TransformComponent>()
+                .Inc<DropAssetComponent>()
                 .End();
             
             _poolService = Service<IPoolService>.Get();
             _enemyHealthComponentPool = _world.GetPool<EnemyHealthComponent>();
             _transformComponentPool = _world.GetPool<TransformComponent>();
             _isDropComponentPool = _world.GetPool<IsDropInstantiateFlag>();
+            _dropAssetComponentPool = _world.GetPool<DropAssetComponent>();
         }
 
         
@@ -37,6 +40,7 @@ namespace MSuhininTestovoe.B2B
             {
                 ref TransformComponent transform = ref _transformComponentPool.Get(entity);
                 ref EnemyHealthComponent health = ref _enemyHealthComponentPool.Get(entity);
+                ref DropAssetComponent dropAsset = ref _dropAssetComponentPool.Get(entity);
                 if (health.HealthValue<=0)
                 {
                     ref IsDropInstantiateFlag drop = ref _isDropComponentPool.Add(transform.Value.gameObject.GetComponent<EnemyActor>().Entity);

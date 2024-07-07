@@ -8,5 +8,7 @@ namespace MSuhininTestovoe.B2B
     {
         public DropType DropType;
         public Sprite Sprite;
+        public GameObject Drop;
+
     }
 }

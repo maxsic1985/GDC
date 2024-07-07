@@ -3,12 +3,10 @@ using Leopotam.EcsLite;
 using UnityEngine;
 
 
-
 namespace MSuhininTestovoe.B2B
 {
     public partial class TriggerSystem
     {
-        private EcsPool<DropAssetComponent> _isEnemyPool;
         private EcsPool<DropComponent> _dropPool;
         private EcsPool<ItemComponent> _itemSlotPool;
         private EcsFilter _filterItem;
@@ -38,8 +36,8 @@ namespace MSuhininTestovoe.B2B
                         {
                             if (item.DropType == drop.DropType)
                             {
-                                UpdateInventory(ref item,ref  drop);
-
+                                UpdateInventory(ref item, ref drop);
+                               
                                 Object.Destroy(dropCollider.gameObject);
                                 _world.DelEntity(dropEntity);
                                 poolEnter.Del(entity);
@@ -48,8 +46,8 @@ namespace MSuhininTestovoe.B2B
                         }
                         else
                         {
-                            UpdateInventory(ref item,ref  drop);
-
+                            UpdateInventory(ref item, ref drop);
+                            
                             Object.Destroy(dropCollider.gameObject);
                             _world.DelEntity(dropEntity);
                             poolEnter.Del(entity);
@@ -64,13 +62,15 @@ namespace MSuhininTestovoe.B2B
             }
         }
 
-        private static  void UpdateInventory(ref ItemComponent item,ref  DropComponent drop)
+        private static void UpdateInventory(ref ItemComponent item, ref DropComponent drop)
         {
+            item.Prefab = drop.Drop;
             item.Sprite.sprite = drop.Sprite;
             item.DropType = drop.DropType;
             item.Count += 1;
-            var text = item.Count > 1 ? item.Count.ToString():" "; 
+            var text = item.Count > 1 ? item.Count.ToString() : " ";
             item.CountText.text = text;
+           
         }
     }
 }
